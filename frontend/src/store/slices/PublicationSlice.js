@@ -9,7 +9,7 @@ const initialState = {
 
 };
 
-const onePublicSlice = createSlice({
+const publicationSlice = createSlice({
     name: 'onePublic',
     initialState,
     reducers: {
@@ -25,6 +25,6 @@ const onePublicSlice = createSlice({
 });
 
 
-export const {setPublic} = onePublicSlice.actions;
+export const {setPublic} = publicationSlice.actions;
 
-export default onePublicSlice.reducer;
+export default publicationSlice.reducer;

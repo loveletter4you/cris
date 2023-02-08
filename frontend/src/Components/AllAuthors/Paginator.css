@@ -4,7 +4,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 22px;
+    font-size: 18px;
     gap: 5px;
     margin-bottom: 20px;
 }
@@ -17,7 +17,7 @@
 }
 
 .pagination li:hover{
-    background-color:#858597;
+    background-color:#06c895;
     color:#fff;
     border-radius: 10px;
 
@@ -25,7 +25,7 @@
 
 .pagination li.selected{
     background-color: #282830;
-    color: #fff;
+    color: white;
     border-radius: 10px;
 
 }

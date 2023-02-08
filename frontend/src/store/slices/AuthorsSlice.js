@@ -5,19 +5,19 @@ import axios from "axios";
 const fetchAuthors = createAsyncThunk(
     'authors/fetchAuthorsAll',
     async (userId, thunkAPI) => {
-        const {data} = await axios.get(`/api/authors?page=0&limit=20`);
+        const {data} = await axios.get(`/api/authors?page=0&limit=30`);
         return data;
     }
 )
 
 const initialState = {
     authors: [],
-    pageSize: 20,
+    pageSize: 30,
     total_authors: 1,
     currentPage: 1
 };
 
-const allAuthorsSlice = createSlice({
+const authorsSlice = createSlice({
     name: 'authors',
     initialState,
     reducers: {
@@ -30,9 +30,9 @@ const allAuthorsSlice = createSlice({
 });
 
 
-export const {setData} = allAuthorsSlice.actions;
+export const {setData} = authorsSlice.actions;
 
-export default allAuthorsSlice.reducer;
+export default authorsSlice.reducer;
 
 
 

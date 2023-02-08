@@ -2,11 +2,11 @@ import React from "react";
 import {useParams} from "react-router-dom";
 import {useDispatch, useSelector} from "react-redux";
 import axios from "axios";
-import {setPublic} from "../../store/slices/onePublicSlice";
-import s from "./OnePublication.module.css"
+import {setPublic} from "../../store/slices/PublicationSlice";
+import s from "./Publication.module.css"
 import AuthorsOfPublication from "../Publications/AuthorsOfPublication";
 
-const OnePublication = () => {
+const Publication = () => {
     const params = useParams();
     const dispatch = useDispatch();
     const onePublic = useSelector(state => state.onePublic);
@@ -33,4 +33,4 @@ const OnePublication = () => {
 
 };
 
-export default OnePublication;
+export default Publication;

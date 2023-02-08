@@ -3,16 +3,17 @@ import './App.css';
 import Header from "./Components/Header/Header";
 import Footer from "./Components/Footer/Footer";
 import {Route, Routes} from "react-router-dom";
-import AllAuthors from "./Components/AllAuthors/AllAuthors";
+import Authors from "./Components/AllAuthors/Authors";
 import Author from "./Components/Authors/Author";
 import Publications from "./Components/Publications/Publications";
 import Auth from "./Components/Auth/Auth";
 import SignUp from "./Components/Auth/SignUp";
-import OnePublication from "./Components/OnePublication/OnePublication";
+import Publication from "./Components/OnePublication/Publication";
 import AuthorsOfPublication from "./Components/Publications/AuthorsOfPublication";
 
 function App(props) {
     return <div className='app-wrapper'>
+        <main className="main">
         <div className="app-wrapper__container">
             <Header/>
             <div className='app-wrapper-content'>
@@ -20,13 +21,13 @@ function App(props) {
                     <Route path='/author/:id'
                            element={<Author/>}/>
                     <Route path='/authors'
-                           element={<AllAuthors/>}/>
+                           element={<Authors/>}/>
                     <Route path={'/publication/:id/authors'}
                            element={<AuthorsOfPublication/>}/>
                     <Route path='/publications'
                            element={<Publications/>}/>
                     <Route path='/publication/:id'
-                           element={<OnePublication/>}/>
+                           element={<Publication/>}/>
                     <Route path = '/login'
                            element={<Auth/>}/>
                     <Route path = '/registration'
@@ -35,6 +36,7 @@ function App(props) {
             </div>
             <Footer/>
         </div>
+        </main>
     </div>
 }
 

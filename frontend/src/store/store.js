@@ -1,9 +1,9 @@
 import { configureStore } from '@reduxjs/toolkit'
-import allAuthorsReducer from "./slices/allAuthorsSlice";
+import allAuthorsReducer from "./slices/AuthorsSlice";
 import authorReducer from "./slices/authorSlice";
 import sortReducer from "./slices/sortSlice";
 import publicationsSlice from "./slices/publicationsSlice";
-import onePublicSlice from "./slices/onePublicSlice";
+import onePublicSlice from "./slices/PublicationSlice";
 
 
 const store = configureStore({

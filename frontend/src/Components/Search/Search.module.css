@@ -1,0 +1,17 @@
+.search{
+    align-self: center;
+    width: 70%;
+
+    padding: 5px 10px;
+    font-size: 15px;
+    outline: none;
+    border: 1px solid #000;
+    border-radius: 10px;
+}
+.search::placeholder{
+    font-size: 15px;
+}
+
+.search:focus{
+    border: 2px solid #000;
+}

@@ -8,6 +8,7 @@ import {setValue} from "../../store/slices/sortSlice";
 import {setPublic} from "../../store/slices/authorSlice";
 import {NavLink, useParams} from "react-router-dom";
 import AuthorsOfPublication from "./AuthorsOfPublication";
+import Search from "../Search/Search";
 
 
 const Publications = () => {
@@ -37,34 +38,36 @@ const Publications = () => {
     }, []);
 
 
-    return (
-        <div onClick={() => {
-            if (seeFiltered === true) setSeeFiltered(false)
-        }}>
-            <input className={s.input} placeholder='Search' type="text"/>
-            <div className={s.sort}>
-                <div className={s.sort__label}>
-                    <b onClick={() => setSeeFiltered(true)}>Сортировка по: {filteredValue.seeFiltered}</b>
+    return (<div>
+            <div onClick={() => {
+                if (seeFiltered === true) setSeeFiltered(false)
+            }} className={s.block}>
+                <Search/>
+                <div className={s.sort}>
+                    <div className={s.sort__label}>
+                        <b onClick={() => setSeeFiltered(true)}>Сортировка по: {filteredValue.seeFiltered}</b>
+                    </div>
+                    {seeFiltered === false ? '' : <div className={s.sort__popup}>
+                        <ul>
+                            <li onClick={() => dispatch(setValue('популярности'))}>популярности</li>
+                            <li onClick={() => dispatch(setValue('публикациям'))}>публикациям</li>
+                            <li onClick={() => dispatch(setValue('алфавиту'))}>алфавиту</li>
+                        </ul>
+                    </div>
+                    }
                 </div>
-                {seeFiltered === false ? '' : <div className={s.sort__popup}>
-                    <ul>
-                        <li onClick={() => dispatch(setValue('популярности'))}>популярности</li>
-                        <li onClick={() => dispatch(setValue('публикациям'))}>публикациям</li>
-                        <li onClick={() => dispatch(setValue('алфавиту'))}>алфавиту</li>
-                    </ul>
-                </div>
-                }
+
+                {publications === undefined ? 'Подожди пж' : publications.map(p => <div>
+                    <div key={p.id} className={s.blocks}>
+                        <div>{p.type.name}</div>
+                        <NavLink to={"/publication/" + p.id}>
+                            <div>{p.title}</div>
+                        </NavLink>
+                        <div>{p.source.Name}</div>
+                        <div>{p.publication_date}</div>
+                    </div>
+                </div>)}
             </div>
-
-           {publications === undefined ? 'Подожди пж' : publications.map(p =>  <div>
-                <div key={p.id} className={s.block}>
-                    <div>{p.type.name}</div>
-                    <NavLink to={"/publication/" + p.id}><div>{p.title}</div></NavLink>
-                    <div>{p.source.Name}</div>
-                    <div>{p.publication_date}</div>
-                </div>
-           </div>)}
-
 
             <ReactPaginate
                 breakLabel="..."

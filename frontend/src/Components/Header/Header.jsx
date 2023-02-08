@@ -5,7 +5,7 @@ import Navbar from "../Navbar/Navbar";
 
 const Header = () => {
     return <div className={s.header}>
-        <img src={logo} alt=""/>
+        Science
         <Navbar/>
 
     </div>

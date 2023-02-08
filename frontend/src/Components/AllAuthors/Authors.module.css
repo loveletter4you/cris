@@ -11,7 +11,7 @@
 
 .list__item{
     color:#2e2e2e;
-    font-size: 20px;
+    font-size: 18px;
     border: none;
     outline: none;
     list-style-type: none;
@@ -25,32 +25,12 @@
 }
 
 .list__item a:hover{
-    color:red;
+    color: #06c895;
 }
 
 .block{
     display: flex;
     flex-direction: column;
-}
-
-.input{
-    align-self: center;
-    width: 410px;
-    height: 30px;
-    margin-top: 15px;
-    padding: 5px 10px;
-    font-size: 15px;
-    outline: none;
-    border: 1px solid #000;
-    border-radius: 10px;
-}
-
-.input::placeholder{
-    font-size: 15px;
-}
-
-.input:focus{
-    border: 2px solid #000;
 }
 
 .block__item{
