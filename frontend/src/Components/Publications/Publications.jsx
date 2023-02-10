@@ -5,9 +5,7 @@ import axios from "axios";
 import {setAuthor, setData} from "../../store/slices/publicationsSlice";
 import ReactPaginate from "react-paginate";
 import {setValue} from "../../store/slices/sortSlice";
-import {setPublic} from "../../store/slices/authorSlice";
 import {NavLink, useParams} from "react-router-dom";
-import AuthorsOfPublication from "./AuthorsOfPublication";
 import Search from "../Search/Search";
 
 
@@ -15,7 +13,6 @@ const Publications = () => {
 
     const [seeFiltered, setSeeFiltered] = React.useState(false);
     const filteredValue = useSelector((state) => state.sort);
-    //const authors = publications.authors;
     const {publications, currentPage, pageSize, total_publications} = useSelector(state => state.publications);
     const dispatch = useDispatch();
 
@@ -43,21 +40,24 @@ const Publications = () => {
                 if (seeFiltered === true) setSeeFiltered(false)
             }} className={s.block}>
                 <Search/>
+
                 <div className={s.sort}>
                     <div className={s.sort__label}>
                         <b onClick={() => setSeeFiltered(true)}>Сортировка по: {filteredValue.seeFiltered}</b>
                     </div>
+
                     {seeFiltered === false ? '' : <div className={s.sort__popup}>
+                        <nav>
                         <ul>
-                            <li onClick={() => dispatch(setValue('популярности'))}>популярности</li>
-                            <li onClick={() => dispatch(setValue('публикациям'))}>публикациям</li>
-                            <li onClick={() => dispatch(setValue('алфавиту'))}>алфавиту</li>
+                            <li onClick={() => dispatch(setValue('Популярности'))} >Популярности</li>
+                            <li onClick={() => dispatch(setValue('Публикациям'))}>Публикациям</li>
+                            <li onClick={() => dispatch(setValue('Алфавиту'))}>Алфавиту</li>
                         </ul>
+                        </nav>
                     </div>
                     }
                 </div>
-
-                {publications === undefined ? 'Подожди пж' : publications.map(p => <div>
+                {publications === undefined ? 'Подождите пожалуйста' : publications.map(p => <div>
                     <div key={p.id} className={s.blocks}>
                         <div>{p.type.name}</div>
                         <NavLink to={"/publication/" + p.id}>

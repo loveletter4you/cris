@@ -1,10 +1,8 @@
 .header {
-    font-family: 'Rajdhani';
     width: 100%;
     box-shadow: 3px 3px 1px rgba(0, 0, 0, .05);
     margin-bottom: 30px;
     position: relative;
-
     display: flex;
     font-size: 50px;
     justify-content: space-between;
@@ -14,4 +12,7 @@
     border-style: solid;
     border-color: #000000;
     border-radius: 10px;
+}
+.head{
+    font-family: 'Rajdhani';
 }

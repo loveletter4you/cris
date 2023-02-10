@@ -26,11 +26,15 @@ const authorsSlice = createSlice({
             state.authors = authors;
             state.total_authors = total_authors;
         },
+        setSize(state, action) {
+            state.pageSize = action.payload;
+        }
+
     }
 });
 
 
-export const {setData} = authorsSlice.actions;
+export const {setData, setSize} = authorsSlice.actions;
 
 export default authorsSlice.reducer;
 

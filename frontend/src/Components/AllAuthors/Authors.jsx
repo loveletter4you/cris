@@ -5,22 +5,22 @@ import s from "./Authors.module.css";
 import ReactPaginate from "react-paginate";
 import Paginator from './Paginator.css';
 import {useDispatch, useSelector} from "react-redux";
-import {setPopupValue} from "../../store/slices/sortSlice";
-import {setData} from "../../store/slices/AuthorsSlice";
+
+import {setData, setSize} from "../../store/slices/AuthorsSlice";
 import Search from "../Search/Search";
+import {setValue} from "../../store/slices/sortSlice";
+
 
 
 const Authors = () => {
 
     const {authors, currentPage, pageSize, total_authors} = useSelector(state => state.allAuthors);
     const dispatch = useDispatch();
-
-
     let pageCount = Math.ceil(total_authors / pageSize);
 
     const handlePageClick = (e) => {
         const fetchAuthors = async () => {
-            const res = await axios.get(`/api/authors?page=${e.selected}&limit=30`);
+            const res = await axios.get(`/api/authors?page=${e.selected}&limit=${pageSize}`);
             dispatch(setData(res.data));
         }
         fetchAuthors();
@@ -28,16 +28,25 @@ const Authors = () => {
 
     React.useEffect(() => {
         const fetchAuthors = async () => {
-            const res = await axios.get(`/api/authors?page=0&limit=30`);
+            const res = await axios.get(`/api/authors?page=0&limit=${pageSize}`);
             dispatch(setData(res.data));
         }
         fetchAuthors();
     }, []);
 
+
     return (
         <div>
             <div className={s.block}>
                 <Search/>
+                <div className={s.size}>
+                    Отображать по:
+                        <ul>
+                            <li onClick={() => dispatch(setSize(30))}>30</li>
+                            <li onClick={() => dispatch(setSize(60))}>60</li>
+                            <li onClick={() => dispatch(setSize(90))}>90</li>
+                        </ul>
+                </div>
                 <div className={s.block__item}>
                     <ul className={s.item}>
                         {authors === undefined ? 'Подожди пж' : authors.map(a => <>

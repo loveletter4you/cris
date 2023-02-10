@@ -1,11 +1,11 @@
 .form {
-    width: 300px; /* ширина блока */
-    height: 290px; /* высота блока */
+    font-size: 16px;
+    width: 30%; /* ширина блока */
+    height: 60%; /* высота блока */
     background: #fff; /* фон блока */
+    border: 1px solid black;
     border-radius: 10px; /* закругленные углы блока */
     margin: 10% auto; /* отступ сверху и выравнивание по середине */
-    box-shadow: 2px 2px 4px 0px #000000; /* тень блока */
-    box-sizing: border-box;
 }
 
 .err {
@@ -16,7 +16,7 @@
 
 h1 {
     margin: 0; /* убираем отступы */
-    background-color: #282830; /* фон заголовка */
+    background-color: black; /* фон заголовка */
     border-radius: 10px 10px 0 0; /* закругляем углы сверху */
     color: #fff; /* цвет текста */
     font-size: 14px; /* размер шрифта */
@@ -33,17 +33,18 @@ h1 {
     font-size: 14px;
 }
 
+
 .log {
     border: 1px solid #dcdcdc; /* рамка */
     padding: 5px 5px; /* отступы текста */
-    width: 260px; /* ширина */
+    width: 95%; /* ширина */
     border-radius: 5px 5px 0 0; /* закругленные углы сверху */
 }
 
 .pass {
     border: 1px solid #dcdcdc; /* рамка */
     padding: 5px 5px; /* отступы текста */
-    width: 260px; /* ширина */
+    width: 95%; /* ширина */
     border-radius: 0px 0px 5px 5px; /* закругленные углы снизу */
 }
 
@@ -54,10 +55,34 @@ h1 {
     padding-bottom: 15px;
 }
 
+label input {
+    display: none;
+}
+label span {
+    height: 12px;
+    width: 12px;
+    border: 1px solid gray;
+    display: inline-block;
+    position: relative;
+    background-color:#FFF;
+    border-radius:2px;
+    padding:3px;
+}
+[type=checkbox]:checked + span:before {
+    content: '\2714';
+    position: absolute;
+    border-radius:2px;
+    top: 0px;
+    left: 0px;
+
+    width: 19px;
+    background-color: black;
+    color:white;
+}
 .btn {
     text-transform: uppercase;
     outline: 0;
-    background: #2C3878;
+    background: #06c895;
     border-radius: 5px;
     width: 100%;
     border: 0;
@@ -69,6 +94,6 @@ h1 {
 
 .reg {
     text-align: center;
-    padding-top: 7px;
+    padding-top: 15px;
 
 }

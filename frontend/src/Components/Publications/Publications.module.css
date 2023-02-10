@@ -1,8 +1,4 @@
 
-*{
-    padding: 0;
-    margin: 0;
-}
 
 .block{
     display: flex;
@@ -26,10 +22,13 @@
 }
 /*Sort*/
 .sort {
-    font-family: 'Aeroport';
     position: relative;
     display: flex;
     flex-direction: column;
+}
+
+.sort b{
+    font-weight: normal;
 }
 
 .sort__label {
@@ -43,15 +42,63 @@
     color: #06c895;
     border-bottom: 1px #06c895;
     cursor: pointer;
+    border-bottom: 3px solid #06c895;
 }
 
 .sort__popup {
     position: absolute;
     left: 0;
-    margin-top: 5px;
-    background: #ffffff;
-    border: 1px black;
-    margin-left: 132px;
+    margin-top:30px;
+}
+
+nav {
+    text-align: center;
+}
+
+
+
+nav ul li:hover > ul {
+    display: block;
+}
+
+nav ul li {
+    float: left;
+    width: 50%;
+    text-align: left;
+    border-left: 3px solid #06c895;
+}
+
+nav ul li:hover {
+    background: #f2f2f2;
+}
+
+nav ul li a {
+    display: block;
+    color: #06c895;
+    text-decoration: none;
+}
+
+nav ul  {
+    border-radius: 0px;
+    padding: 0;
+    position: absolute;
+    top: 100%;
+}
+
+nav ul ul li {
+    float: none;
+    border-bottom: 2px solid #06c895;
+    position: relative;
+}
+
+nav ul ul li a {
+    padding: 15px 10px;
+    color: #666666;
+}
+
+nav ul ul li a:hover {
+    background: #06c895;
+    color: #fff;
 }
 
 .sort ul{
@@ -60,15 +107,14 @@
 }
 
 .sort ul li{
-    padding: 10px 10px;
+    padding: 10px;
     cursor: pointer;
-    margin-bottom: 5px;
     background-color: white;
 }
 
 
 .sort ul li.active:hover{
-    background: rgba(254, 95, 30);
+    background: #06c895;
 }
 
 .sort ul li:hover{

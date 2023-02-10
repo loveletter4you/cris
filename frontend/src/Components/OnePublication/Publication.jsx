@@ -27,7 +27,9 @@ const Publication = () => {
                 <div>{onePublic.source.Name}</div>
                 <div>{onePublic.publication_date}</div>
             </div>
+            <div className={s.authors}>
             <AuthorsOfPublication id={params.id}/>
+            </div>
         </div>
     )
 

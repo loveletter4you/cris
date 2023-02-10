@@ -12,7 +12,7 @@ export const sortSlice = createSlice({
     reducers: {
         setValue(state, action) {
             state.seeFiltered = action.payload;
-        }
+        },
     }
 })
 

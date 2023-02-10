@@ -1,4 +1,5 @@
 .appWrapperNavbar {
+
     display: flex;
     align-items: center;
     font-size: 18px;
@@ -19,7 +20,6 @@
 }
 
 .btn {
-    font-family: 'Aeroport';
     margin-left: 50px;
     font-size: 18px;
     cursor: pointer;
@@ -29,57 +29,3 @@
 }
 
 
-
-
-
-
-nav > ul {
-    padding: 0;
-}
-nav li{
-    display: inline-block;
-    vertical-align: top;
-    padding: 2px;
-}
-nav a{
-    padding: 1px 5px;
-    text-decoration: none;
-    border: 1px solid transparent;
-    transition: 0.9s;
-}
-
-
-input[type="checkbox"] {
-    display: none;
-}
-nav label {
-    display: none;
-    padding: 1px 5px;
-    cursor: pointer;
-    transition: 0.9s;
-}
-
-
-@media screen and (max-width: 1000px) {
-
-    nav {
-        text-align: left;
-    }
-    nav label{
-        display: inline-block;
-    }
-    nav > ul {
-        display: none;
-        /*width: 100px;*/
-        left: 0;
-    }
-    nav li{
-        display: block;
-        vertical-align: top;
-        padding: 2px;
-    }
-    input[type="checkbox"]:checked ~ label + ul {
-        display: block;
-    }
-
-}

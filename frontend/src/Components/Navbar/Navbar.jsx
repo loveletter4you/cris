@@ -4,11 +4,8 @@ import {NavLink} from "react-router-dom";
 
 
 const Navbar = () => {
-    return
-    <nav>
-        <div className={n.appWrapperNavbar}>
-            <input type="checkbox" name="menu" id="btn-menu"/>
-            <label for="btn-menu">btn menu</label>
+    return <div className={n.appWrapperNavbar}>
+
             <div className={n.item}>
                 <NavLink to="/publications"
                          className={navData => navData.isActive ? n.active : n.item}>Публикации</NavLink>
@@ -22,9 +19,7 @@ const Navbar = () => {
             <NavLink to="/login">
                 <button className={n.btn}>Войти</button>
             </NavLink>
-
-        </div>
-    </nav>
+    </div>
 }
 
 export default Navbar;

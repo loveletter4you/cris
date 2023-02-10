@@ -47,7 +47,9 @@ const Author = () => {
                         </p>)}
                     </div>
                 </div>
+                <div className={s.title}>
                 Публикации:
+                </div>
                 <div>{publication === undefined? ' ' : publication.map(p => <div className={s.public}>
                     <p>{p.type.name}</p>
                     <NavLink to={"/publication/" + p.id}><p>{p.title}</p></NavLink>
