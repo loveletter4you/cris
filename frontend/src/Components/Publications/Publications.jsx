@@ -1,12 +1,13 @@
-import React, {useState} from 'react';
+import React from 'react';
 import s from './Publications.module.css';
 import {useDispatch, useSelector} from "react-redux";
 import axios from "axios";
-import {setAuthor, setData} from "../../store/slices/publicationsSlice";
+import {setData} from "../../store/slices/publicationsSlice";
 import ReactPaginate from "react-paginate";
 import {setValue} from "../../store/slices/sortSlice";
 import {NavLink, useParams} from "react-router-dom";
 import Search from "../Search/Search";
+import {setSize} from "../../store/slices/publicationsSlice";
 
 
 const Publications = () => {
@@ -20,7 +21,7 @@ const Publications = () => {
 
     const handlePageClick = (e) => {
         const fetchPublications = async () => {
-            const res = await axios.get(`/api/publications?page=${e.selected}&limit=20`);
+            const res = await axios.get(`/api/publications?page=${e.selected}&limit=${pageSize}`);
             dispatch(setData(res.data));
         }
         fetchPublications();
@@ -28,11 +29,11 @@ const Publications = () => {
 
     React.useEffect(() => {
         const fetchPublications = async () => {
-            const res = await axios.get(`/api/publications?page=0&limit=20`);
+            const res = await axios.get(`/api/publications?page=0&limit=${pageSize}`);
             dispatch(setData(res.data));
         }
         fetchPublications();
-    }, []);
+    }, [pageSize]);
 
 
     return (<div>
@@ -40,7 +41,14 @@ const Publications = () => {
                 if (seeFiltered === true) setSeeFiltered(false)
             }} className={s.block}>
                 <Search/>
-
+                <div className={s.size}>
+                    Отображать по:
+                    <ul>
+                        <li onClick={() => {dispatch(setSize(20)); }}>20</li>
+                        <li onClick={() => {dispatch(setSize(40)); }}>40</li>
+                        <li onClick={() => {dispatch(setSize(80)); }}>80</li>
+                    </ul>
+                </div>
                 <div className={s.sort}>
                     <div className={s.sort__label}>
                         <b onClick={() => setSeeFiltered(true)}>Сортировка по: {filteredValue.seeFiltered}</b>

@@ -20,7 +20,7 @@
 .block a:hover{
     color: #06c895;
 }
-/*Sort*/
+
 .sort {
     position: relative;
     display: flex;
@@ -34,7 +34,6 @@
 .sort__label {
     display: flex;
     align-items: center;
-    padding-top: 15px;
     padding-bottom: 15px;
 }
 
@@ -48,7 +47,7 @@
 .sort__popup {
     position: absolute;
     left: 0;
-    margin-top:30px;
+    margin-top:20px;
 }
 
 nav {
@@ -90,6 +89,23 @@ nav ul ul li {
     border-bottom: 2px solid #06c895;
     position: relative;
 }
+
+.size{
+    padding-top: 10px;
+}
+
+.size ul{
+    list-style: none;
+    display: inline;
+    padding-inline-start: 0;
+    font-size: 18px;
+}
+
+.size ul li {
+    display: inline-block;
+    padding: 5px;
+}
+
 
 nav ul ul li a {
     padding: 15px 10px;

@@ -55,30 +55,6 @@ h1 {
     padding-bottom: 15px;
 }
 
-label input {
-    display: none;
-}
-label span {
-    height: 12px;
-    width: 12px;
-    border: 1px solid gray;
-    display: inline-block;
-    position: relative;
-    background-color:#FFF;
-    border-radius:2px;
-    padding:3px;
-}
-[type=checkbox]:checked + span:before {
-    content: '\2714';
-    position: absolute;
-    border-radius:2px;
-    top: 0px;
-    left: 0px;
-
-    width: 19px;
-    background-color: black;
-    color:white;
-}
 .btn {
     text-transform: uppercase;
     outline: 0;

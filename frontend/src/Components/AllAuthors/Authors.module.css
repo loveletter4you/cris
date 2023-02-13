@@ -1,7 +1,7 @@
 
 
 .item{
-    padding-left: 25px;
+    padding-left: 0px;
 }
 
 .list__item{
@@ -33,9 +33,13 @@
     justify-content: space-between;
 }
 
+.size{
+    padding-top: 10px;
+}
+
 .size ul{
     list-style: none;
-    display: inline-block;
+    display: inline;
     padding-inline-start: 0;
     font-size: 18px;
 }

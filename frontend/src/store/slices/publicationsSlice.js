@@ -32,12 +32,16 @@ const publicationsSlice = createSlice({
         setAuthors(state, action) {
             const authors = action.payload.authors;
             state.authors = authors;
+        },
+        setSize(state, action) {
+            state.pageSize = action.payload;
         }
+
     }
 });
 
 
-export const {setData, setAuthors} = publicationsSlice.actions;
+export const {setData, setAuthors,setSize} = publicationsSlice.actions;
 
 export default publicationsSlice.reducer;
 
