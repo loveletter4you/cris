@@ -9,3 +9,9 @@
     border-radius: 10px;
     margin-bottom: 15px;
 }
+
+@media (max-width: 991px) {
+    .footer{
+       min-width: 350px;
+    }
+}

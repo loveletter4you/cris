@@ -1,23 +1,24 @@
 
-
-.block{
+.block {
     display: flex;
     flex-direction: column;
 }
 
-.blocks{
+.blocks {
     border: 1px solid #000;
     padding: 10px;
-    margin: 5px 0;
+    margin-top: 5px;
+    margin-bottom: 5px;
     font-size: 16px;
     border-radius: 10px;
 }
+
 .block a {
     text-decoration: none;
     color: black;
 }
 
-.block a:hover{
+.block a:hover {
     color: #06c895;
 }
 
@@ -27,7 +28,13 @@
     flex-direction: column;
 }
 
-.sort b{
+@media (max-width: 991px) {
+    .sort {
+        position: static;
+    }
+}
+
+.sort b {
     font-weight: normal;
 }
 
@@ -47,13 +54,12 @@
 .sort__popup {
     position: absolute;
     left: 0;
-    margin-top:20px;
+    margin-top: 20px;
 }
 
 nav {
     text-align: center;
 }
-
 
 
 nav ul li:hover > ul {
@@ -77,7 +83,7 @@ nav ul li a {
     text-decoration: none;
 }
 
-nav ul  {
+nav ul {
     border-radius: 0px;
     padding: 0;
     position: absolute;
@@ -90,11 +96,11 @@ nav ul ul li {
     position: relative;
 }
 
-.size{
+.size {
     padding-top: 10px;
 }
 
-.size ul{
+.size ul {
     list-style: none;
     display: inline;
     padding-inline-start: 0;
@@ -106,6 +112,11 @@ nav ul ul li {
     padding: 5px;
 }
 
+.size li:active{
+    color: #06c895;
+    font-family: 'Aeroport-Bold';
+    font-weight: bold;
+}
 
 nav ul ul li a {
     padding: 15px 10px;
@@ -117,23 +128,23 @@ nav ul ul li a:hover {
     color: #fff;
 }
 
-.sort ul{
+.sort ul {
     list-style: none;
     position: relative;
 }
 
-.sort ul li{
+.sort ul li {
     padding: 10px;
     cursor: pointer;
     background-color: white;
 }
 
 
-.sort ul li.active:hover{
+.sort ul li.active:hover {
     background: #06c895;
 }
 
-.sort ul li:hover{
+.sort ul li:hover {
     font-weight: normal;
     color: #06c895;
 }

@@ -32,10 +32,11 @@ const Auth = () => {
             <div>
                 <button className={s.btn}>Войти</button>
             </div>
+            <div className={s.reg}><NavLink to={"/registration"}>Зарегистрироваться</NavLink></div>
+            <div className= {s.reg}><NavLink to={"/recovery"}>Забыли пароль?</NavLink></div>
         </form>
         </div>
-        <div className={s.reg}><NavLink to={"/registration"}>Зарегистрироваться</NavLink></div>
-        <div className= {s.reg}><NavLink to={"/recovery"}>Забыли пароль?</NavLink></div>
+
     </div>
 }
 

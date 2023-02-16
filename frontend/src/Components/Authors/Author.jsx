@@ -35,7 +35,7 @@ const Author = () => {
     }, [])
 
     return (<div>
-            {author === undefined ? 'Ну подождите пж' : <>
+            {author === undefined ? 'Подождите пожалуйста' : <>
                 <div className={s.block}>
                     <img className={s.block__image}
                          src={avatar}

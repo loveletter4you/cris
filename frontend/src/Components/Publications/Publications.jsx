@@ -57,7 +57,7 @@ const Publications = () => {
                     {seeFiltered === false ? '' : <div className={s.sort__popup}>
                         <nav>
                         <ul>
-                            <li onClick={() => dispatch(setValue('Популярности'))} >Популярности</li>
+                            <li onClick={() => dispatch(setValue('Популярности'))}>Популярности</li>
                             <li onClick={() => dispatch(setValue('Публикациям'))}>Публикациям</li>
                             <li onClick={() => dispatch(setValue('Алфавиту'))}>Алфавиту</li>
                         </ul>
@@ -86,8 +86,17 @@ const Publications = () => {
                 previousLabel="<-"
                 renderOnZeroPageCount={null}
 
-                containerClassName='pagination'
-                activeLinkClassName='active'
+                pageClassName="page-item"
+                pageLinkClassName="page-link"
+                previousClassName="page-item"
+                previousLinkClassName="page-link"
+                nextClassName="page-item"
+                nextLinkClassName="page-link"
+                breakClassName="page-item"
+                breakLinkClassName="page-link"
+                containerClassName="pagination"
+                activeClassName="active"
+
             />
         </div>
     );

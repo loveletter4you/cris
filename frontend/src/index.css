@@ -3,12 +3,22 @@
   src: url(./assets/Aeroport.ttf);
 }
 @font-face {
+  font-family: 'Aeroport-Bold';
+  src: url(./assets/Aeroport-Bold.ttf);
+  font-weight: bold;
+}
+@font-face {
+  font-family: 'Aeroport-Medium';
+  src: url(./assets/Aeroport-Medium.ttf);
+}
+@font-face {
   font-family: "Rajdhani";
   src: url(./assets/Rajdhani-Regular.ttf);
 }
 
 
 body {
+  width: 100%;
   margin: 0;
   font-family: 'Aeroport', 'Rajdhani', --base-font;
   -webkit-font-smoothing: antialiased;

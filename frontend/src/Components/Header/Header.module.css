@@ -1,5 +1,6 @@
 .header {
     width: 100%;
+    min-width: 310px;
     box-shadow: 3px 3px 1px rgba(0, 0, 0, .05);
     margin-bottom: 30px;
     position: relative;
@@ -15,4 +16,10 @@
 }
 .head{
     font-family: 'Rajdhani';
+}
+@media (max-width: 991px) {
+    .header{
+        height: 50px;
+        font-size: 40px;
+    }
 }
