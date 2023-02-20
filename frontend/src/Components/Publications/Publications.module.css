@@ -28,7 +28,8 @@
     display: grid;
     grid-template-areas:
             'search search'
-            'filter publications';
+            'filter publications'
+            'pagination pagination';
     grid-auto-columns: 270px 930px;
     grid-auto-flow: dense;
 }

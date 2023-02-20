@@ -7,11 +7,9 @@
     font-size: 18px;
     gap: 5px;
     margin-bottom: 20px;
+    grid-area: pagination;
 }
 
-.pagination li {
-
-}
 
 .pagination li:hover {
     background-color: #06c895;

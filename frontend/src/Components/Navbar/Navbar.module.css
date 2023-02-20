@@ -10,9 +10,9 @@
 }
 
 .item {
-    display: flex;
     position: relative;
-    z-index: 2;
+    cursor: pointer;
+    text-decoration: none;
 }
 
 .item a {
@@ -20,8 +20,20 @@
     text-decoration: none;
 }
 
-.item a.active {
-    color: #06c895;
+
+.item a:after {
+    display: block;
+    position: absolute;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background-color: #06c895;
+    content: "";
+    transition: width 0.3s;
+}
+
+.item a:hover:after{
+    width: 100%;
 }
 
 .btn {
@@ -37,11 +49,6 @@
 .menu {
     display: inline-flex;
     padding-top: 5px;
-}
-
-.btn:hover {
-    background-color: #06c895;
-    color: white;
 }
 
 .burger {
@@ -126,9 +133,6 @@
         padding-top: 10px;
     }
 
-    .item a.active {
-        padding-top: 10px;
-    }
 
     .item + .item {
         margin-left: 0px;
