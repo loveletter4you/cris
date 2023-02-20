@@ -7,7 +7,6 @@ const Header = () => {
     return <div className={s.header}>
         <div className={s.head}>Science</div>
         <Navbar/>
-
     </div>
 }
 

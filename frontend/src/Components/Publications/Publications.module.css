@@ -2,12 +2,13 @@
 .block {
     display: flex;
     flex-direction: column;
+    grid-area: publications;
+    margin-top: 10px;;
 }
 
 .blocks {
     border: 1px solid #000;
     padding: 10px;
-    margin-top: 5px;
     margin-bottom: 5px;
     font-size: 16px;
     border-radius: 10px;
@@ -22,129 +23,18 @@
     color: #06c895;
 }
 
-.sort {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-}
 
+.container{
+    display: grid;
+    grid-template-areas:
+            'search search'
+            'filter publications';
+    grid-auto-columns: 270px 930px;
+    grid-auto-flow: dense;
+}
 @media (max-width: 991px) {
-    .sort {
-        position: static;
+    .container {
+        display: flex;
+        flex-direction: column;
     }
-}
-
-.sort b {
-    font-weight: normal;
-}
-
-.sort__label {
-    display: flex;
-    align-items: center;
-    padding-bottom: 15px;
-}
-
-.sort__label span {
-    color: #06c895;
-    border-bottom: 1px #06c895;
-    cursor: pointer;
-    border-bottom: 3px solid #06c895;
-}
-
-.sort__popup {
-    position: absolute;
-    left: 0;
-    margin-top: 20px;
-}
-
-nav {
-    text-align: center;
-}
-
-
-nav ul li:hover > ul {
-    display: block;
-}
-
-nav ul li {
-    float: left;
-    width: 50%;
-    text-align: left;
-    border-left: 3px solid #06c895;
-}
-
-nav ul li:hover {
-    background: #f2f2f2;
-}
-
-nav ul li a {
-    display: block;
-    color: #06c895;
-    text-decoration: none;
-}
-
-nav ul {
-    border-radius: 0px;
-    padding: 0;
-    position: absolute;
-    top: 100%;
-}
-
-nav ul ul li {
-    float: none;
-    border-bottom: 2px solid #06c895;
-    position: relative;
-}
-
-.size {
-    padding-top: 10px;
-}
-
-.size ul {
-    list-style: none;
-    display: inline;
-    padding-inline-start: 0;
-    font-size: 18px;
-}
-
-.size ul li {
-    display: inline-block;
-    padding: 5px;
-}
-
-.size li:active{
-    color: #06c895;
-    font-family: 'Aeroport-Bold';
-    font-weight: bold;
-}
-
-nav ul ul li a {
-    padding: 15px 10px;
-    color: #666666;
-}
-
-nav ul ul li a:hover {
-    background: #06c895;
-    color: #fff;
-}
-
-.sort ul {
-    list-style: none;
-    position: relative;
-}
-
-.sort ul li {
-    padding: 10px;
-    cursor: pointer;
-    background-color: white;
-}
-
-
-.sort ul li.active:hover {
-    background: #06c895;
-}
-
-.sort ul li:hover {
-    font-weight: normal;
-    color: #06c895;
 }

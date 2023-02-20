@@ -50,9 +50,6 @@
 
 @media (max-width: 991px) {
 
-    .appWrapperNavbar {
-        max-width: 720px;
-    }
 
     .burger {
         display: block;
@@ -92,11 +89,11 @@
         position: fixed;
         right: -150%;
         top: 0;
-        width: 60%;
+        width: 65%;
         height: 100%;
         background-color: white;
         color: black;
-        padding: 80px 0px 0px 50px;
+        padding: 20px 0px 0px 50px;
         transition: all 0.3s ease 0s;
     }
 
@@ -106,13 +103,11 @@
         visibility: visible;
     }
 
+
     .active {
         display: block;
     }
 
-    body.active {
-        position: fixed;
-    }
 
     .back {
         display: block;
