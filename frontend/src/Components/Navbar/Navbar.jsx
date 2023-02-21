@@ -13,7 +13,7 @@ const Navbar = () => {
     }
 
     useEffect(() => {
-        if(Active===true){
+        if(Active===true && window.innerWidth < 991){
             document.body.style.overflow = 'hidden';
         }
         else {
@@ -39,7 +39,7 @@ const Navbar = () => {
                                  className={navData => navData.isActive ? n.active : null}>Персоналии</NavLink>
                     </div>
                     <div className={n.item} onClick={toggle}>
-                        <NavLink to="/"
+                        <NavLink to="/sources"
                                  className={navData => navData.isActive ? n.active : null}>Источники</NavLink>
                     </div>
                     <NavLink to="/login">

@@ -6,7 +6,7 @@
 }
 
 .item + .item {
-    margin-left: 20px;
+    margin-left: 30px;
 }
 
 .item {
@@ -20,6 +20,9 @@
     text-decoration: none;
 }
 
+.item a.active{
+    color: #06c895;
+}
 
 .item a:after {
     display: block;

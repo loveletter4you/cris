@@ -43,7 +43,6 @@
 @media (max-width: 991px) {
    .pagination{
        font-size: 16px;
-       justify-content: normal;
    }
     .page-link{
         padding: 8px;

@@ -3,8 +3,8 @@ import {NavLink, useParams} from "react-router-dom";
 import axios from "axios";
 import s from './Author.module.css'
 import {useDispatch, useSelector} from "react-redux";
-import {setAuthor, setPublic} from "../../store/slices/authorSlice";
-import avatar from "./../../assets/img/avatar.svg"
+import {setAuthor, setPublic} from "../../store/slices/AuthorSlice";
+import avatar from "../../assets/img/avatar.svg"
 
 const Author = () => {
 

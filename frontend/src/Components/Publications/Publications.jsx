@@ -2,12 +2,12 @@ import React from 'react';
 import s from './Publications.module.css';
 import {useDispatch, useSelector} from "react-redux";
 import axios from "axios";
-import {setData} from "../../store/slices/publicationsSlice";
+import {setData} from "../../store/slices/PublicationsSlice";
 import ReactPaginate from "react-paginate";
-import {setValue} from "../../store/slices/sortSlice";
+import {setValue} from "../../store/slices/SortSlice";
 import {NavLink, useParams} from "react-router-dom";
 import Search from "../Search/Search";
-import {setSize} from "../../store/slices/publicationsSlice";
+import {setSize} from "../../store/slices/PublicationsSlice";
 import PublicationFilter from "../Filters/PublicationFilter";
 
 

@@ -9,7 +9,7 @@ import AuthorsOfPublication from "../Publications/AuthorsOfPublication";
 const Publication = () => {
     const params = useParams();
     const dispatch = useDispatch();
-    const onePublic = useSelector(state => state.onePublic);
+    const onePublic = useSelector(state => state.publication);
 
 
     React.useEffect(() => {

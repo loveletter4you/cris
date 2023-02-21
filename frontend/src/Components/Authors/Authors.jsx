@@ -5,16 +5,14 @@ import s from "./Authors.module.css";
 import ReactPaginate from "react-paginate";
 import Paginator from '../Paginator/Paginator.css';
 import {useDispatch, useSelector} from "react-redux";
-
 import {setData, setSize} from "../../store/slices/AuthorsSlice";
 import Search from "../Search/Search";
-import {setValue} from "../../store/slices/sortSlice";
 
 
 
 const Authors = () => {
 
-    const {authors, currentPage,pageSize, total_authors} = useSelector(state => state.allAuthors);
+    const {authors, currentPage,pageSize, total_authors} = useSelector(state => state.authors);
     const dispatch = useDispatch();
     let pageCount = Math.ceil(total_authors / pageSize);
 
@@ -25,6 +23,8 @@ const Authors = () => {
         }
         fetchAuthors();
     }
+
+
 
     React.useEffect(() => {
         const fetchAuthors = async () => {

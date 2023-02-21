@@ -1,8 +1,8 @@
 import React, {useState} from "react";
 import {useDispatch, useSelector} from "react-redux";
 import s from "../Filters/PublicationFilter.module.css";
-import {setSize} from "../../store/slices/publicationsSlice";
-import {setValue} from "../../store/slices/sortSlice";
+import {setSize} from "../../store/slices/PublicationsSlice";
+import {setValue} from "../../store/slices/SortSlice";
 
 
 const PublicationFilter = () => {

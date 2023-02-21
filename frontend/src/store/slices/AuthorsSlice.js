@@ -1,15 +1,6 @@
-import {createAsyncThunk, createSlice} from "@reduxjs/toolkit";
-import axios from "axios";
-import authors from "../../Components/AllAuthors/Authors";
+import { createSlice} from "@reduxjs/toolkit";
 
 
-const fetchAuthors = createAsyncThunk(
-    'authors/fetchAuthorsAll',
-    async (userId, thunkAPI) => {
-        const {data} = await axios.get(`/api/authors?page=0&limit=30`);
-        return data;
-    }
-)
 
 const initialState = {
     authors: [],
